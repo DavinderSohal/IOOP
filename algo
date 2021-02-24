@@ -1,0 +1,37 @@
+start
+step 1: enter first number
+step 2: input first number
+step 3:enter second number
+step 4:input second number
+step 5:enter your choose
+	1 for addition'
+	2 for sub
+	3 for multiplicity
+	4 for division
+	5 for factorial
+	6 for power
+step 6: input choose
+step 7:switch(choose)
+{
+case 1:
+    print first number+second number
+case 2:
+    print first number+second number
+case 3:
+    print first number*second number
+case 4:
+    print first number/second number
+case 5:
+    fact=1;
+    i=1;
+    while(i is smaller than and equal to first number)
+    {
+	    fact=fact*i)
+    }
+    print fact
+case 6:
+    print Math.pow(first number,second number);
+case default:
+    print error
+}
+STOP
