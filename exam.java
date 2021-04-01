@@ -35,9 +35,15 @@ public class exam{
                     }
 
                     // after time reach midnight it assign value zero to all
-                    if(hour == 23 && min == 59 && sec == 59 && count == 0){
-                        hour = min = sec = 0;
-                        count++;
+                    if(sec == 59 && count == 0){
+                        current_seconds = 0;
+                        if(min == 59){
+                            current_minutes = 0;
+                            if(hour == 23){
+                                hour = 0;
+                                count++;
+                            }
+                        }
                     }
                 }
             }
