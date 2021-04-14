@@ -40,6 +40,5 @@ public class User{
         }else{
             System.out.printf("\n%s %s, System is closed\n", first_name, last_name);
         }
-
     }
 }
