@@ -277,3 +277,101 @@
 //    }
 //}
 
+class person{
+    String first_name;
+    String last_name;
+
+    public String getFirst_name(){
+        return first_name;
+    }
+
+    public void setFirst_name(String first_name){
+        this.first_name = first_name;
+    }
+
+    public String getLast_name(){
+        return last_name;
+    }
+
+    public void setLast_name(String last_name){
+        this.last_name = last_name;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    String password;
+
+    public person(String first_name, String last_name, String password){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.password = password;
+    }
+}
+
+class customer extends person{
+    int member_id;
+
+    public int getMember_id(){
+        return member_id;
+    }
+
+    public void setMember_id(int member_id){
+        this.member_id = member_id;
+    }
+
+    public customer(String first_name, String last_name, String password, int member_id){
+        super(first_name, last_name, password);
+        this.member_id = member_id;
+    }
+}
+
+class employee extends person{
+    int employee_id;
+    String date;
+
+    public int getEmployee_id(){
+        return employee_id;
+    }
+
+    public void setEmployee_id(int employee_id){
+        this.employee_id = employee_id;
+    }
+
+    public String getDate(){
+        return date;
+    }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public employee(String first_name, String last_name, String password, int employee_id, String date){
+        super(first_name, last_name, password);
+        this.employee_id = employee_id;
+        this.date = date;
+    }
+}
+
+class main{
+    public static void main(String[] args){
+        customer c = new customer("name","lastname","password",1234);
+        employee e = new employee("name","lastname","password",1234,"12-12-12");
+
+        System.out.println(c.getFirst_name());
+        System.out.println(c.getLast_name());
+        System.out.println(c.getPassword());
+        System.out.println(c.getMember_id());
+        System.out.println();
+        System.out.println(e.getFirst_name());
+        System.out.println(e.getLast_name());
+        System.out.println(e.getPassword());
+        System.out.println(e.getEmployee_id());
+        System.out.println(e.getDate());
+    }
+}
